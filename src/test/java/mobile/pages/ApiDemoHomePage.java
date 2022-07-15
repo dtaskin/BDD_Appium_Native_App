@@ -4,6 +4,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.cucumber.java.en.And;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
@@ -29,5 +30,11 @@ public class ApiDemoHomePage {
 
     @AndroidFindBy(id = "android:id/text1")
     public List<AndroidElement> allMainMenuOptions;
+
+    @AndroidFindBy(accessibility = "Graphics")
+    public AndroidElement graphicsOption;
+
+    @AndroidFindBy(accessibility = "Text")
+    public AndroidElement textOption;
 
 }
